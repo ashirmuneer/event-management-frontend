@@ -1,0 +1,1 @@
+var websiteURL = "http://localhost/event-management/public/api/";
