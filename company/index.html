@@ -215,6 +215,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/custom.js"></script>
 
   <script>
 
@@ -235,7 +236,7 @@ $(document).ready(function() {
       
             $.ajax({
             type: "GET",
-            url: "http://localhost/event-management/public/api/logout",
+            url: websiteURL+"logout",
             beforeSend: function (xhr) {
                 xhr.setRequestHeader("Authorization", "Bearer " + localStorage.getItem("session"));
                 },                
