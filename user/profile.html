@@ -242,6 +242,9 @@
 
   <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
   <script src="assets/js/notification.js"></script>
+  <script src="../company/assets/js/custom.js"></script>
+
+
 
   <script>
 
@@ -256,7 +259,7 @@ $(document).ready(function() {
     
     $.ajax({
       type: "GET",
-      url: "http://localhost/event-management/public/api/user-info",
+      url: websiteURL+"user-info",
       beforeSend: function (xhr) {
        xhr.setRequestHeader("Authorization", "Bearer " + localStorage.getItem("session"));
       },
@@ -298,7 +301,7 @@ event.preventDefault();
 var formData = $("#profile-form").serialize();
 $.ajax({
   type: "PUT",
-  url: "http://localhost/event-management/public/api/user-info-update",
+  url: websiteURL+"user-info-update",
   beforeSend: function (xhr) {
        xhr.setRequestHeader("Authorization", "Bearer " + localStorage.getItem("session"));
       },
@@ -349,7 +352,7 @@ $.ajax({
      
     $.ajax({
       type: "GET",
-      url: "http://localhost/event-management/public/api/user-notifications",
+      url: websiteURL+"user-notifications",
       beforeSend: function (xhr) {
        xhr.setRequestHeader("Authorization", "Bearer " + localStorage.getItem("session"));
       },
@@ -387,7 +390,7 @@ $.ajax({
           
                 $.ajax({
                 type: "GET",
-                url: "http://localhost/event-management/public/api/logout",
+                url: websiteURL+"logout",
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("Authorization", "Bearer " + localStorage.getItem("session"));
                     },                
@@ -419,7 +422,7 @@ $.ajax({
 
     $.ajax({
     type: "GET",
-    url: "http://localhost/event-management/public/api/user-notifications",
+    url: websiteURL+"user-notifications",
     beforeSend: function (xhr) {
      xhr.setRequestHeader("Authorization", "Bearer " + localStorage.getItem("session"));
     },

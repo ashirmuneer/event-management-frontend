@@ -164,6 +164,8 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script src="./company/assets/js/custom.js"></script>
+
     <script>
         $(document).ready(function() {
   $("#register-form").submit(function(event) {
@@ -183,7 +185,7 @@
     var formData = $("#register-form").serialize();
     $.ajax({
       type: "POST",
-      url: "http://localhost/event-management/public/api/register",
+      url: websiteURL+"register",
       data: formData,
       success: function(data) {
         
